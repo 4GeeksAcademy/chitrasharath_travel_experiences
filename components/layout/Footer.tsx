@@ -27,7 +27,6 @@ const Footer = () => {
               ))}
             </div>
           </div>
-
           {footerLinkGroups.map((group) => (
             <div key={group.title} className="hidden md:block">
               <p className="text-xs uppercase tracking-[0.2em] text-white/60">{group.title}</p>
