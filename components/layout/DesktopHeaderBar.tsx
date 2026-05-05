@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import CtaButton from "@/components/ui/CtaButton";
 import { headerContact, primaryNavLinks } from "@/data/site_content";
+import userProfile from "@/data/user_profile";
 
 const DesktopHeaderBar = () => {
   return (
@@ -26,8 +27,16 @@ const DesktopHeaderBar = () => {
         <a href={headerContact.phoneHref} className="text-xs uppercase tracking-[0.16em] text-[var(--color-muted)]">
           {headerContact.phoneLabel}
         </a>
-        <Link href={headerContact.accountHref} className="text-xs uppercase tracking-[0.16em] text-[var(--color-muted)]">
-          Account
+        <Link
+          href={headerContact.accountHref}
+          aria-label="Account"
+          className="inline-flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-[var(--color-border)]"
+        >
+          <img
+            src={userProfile.avatarImageUrl}
+            alt={userProfile.displayName}
+            className="h-full w-full object-cover"
+          />
         </Link>
         <CtaButton href={headerContact.enquireHref} label="Enquire now" variant="secondary" />
       </div>

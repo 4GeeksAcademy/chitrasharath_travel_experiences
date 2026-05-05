@@ -24,7 +24,7 @@ const FavoriteToggleButton = ({
           : "border-white/70 bg-black/25 text-white"
       }`}
     >
-      {active ? "Saved" : "Save"}
+      {active ? <span aria-hidden="true">♥</span> : "Save"}
     </button>
   );
 };

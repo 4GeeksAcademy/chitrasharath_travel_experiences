@@ -8,7 +8,7 @@ const ExperiencesPlanningCta = () => {
         Share your timing, travel style, and priorities. We will shape a route around them.
       </p>
       <div className="mt-6">
-        <CtaButton href="/profile" label="Talk to a planner" variant="secondary" />
+        <CtaButton href="/contact" label="Enquire now" variant="secondary" />
       </div>
     </div>
   );
