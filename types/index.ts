@@ -1,9 +1,10 @@
 export type {
   Experience,
   ExperienceCategory,
+  ExperienceSeed,
   TravelerType,
   SourceSite,
-} from "@/data/experiences";
+} from "@/types/experiences";
 
 export type {
   UserProfile,
@@ -12,7 +13,7 @@ export type {
   ProfileStat,
   ProfileTab,
   PassportMapCard,
-} from "@/data/user_profile";
+} from "@/types/user_profile";
 
 export type {
   NavLink,
@@ -27,13 +28,15 @@ export type {
   SeasonalSlide,
   StoryCollageContent,
   NewsletterContent,
-} from "@/data/site_content";
+  HeroMedia,
+} from "@/types/site_content";
 
 export type {
   ExperienceDetailContent,
+  ExperienceDetailSection,
   AccommodationCardContent,
   RelatedRegionCtaContent,
-} from "@/data/experience_enrichment";
+} from "@/types/experience_enrichment";
 
 export interface BreadcrumbItem {
   label: string;

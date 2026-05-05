@@ -1,35 +1,6 @@
-import { experiences, type Experience } from "@/data/experiences";
-
-export interface AccommodationCardContent {
-  name: string;
-  href: string;
-  secondaryLabel: string;
-  imageUrl: string;
-}
-
-export interface RelatedRegionCtaContent {
-  regionName: string;
-  body: string;
-  primaryLabel: string;
-  primaryHref: string;
-  secondaryLabel: string;
-  secondaryHref: string;
-  phoneLabel: string;
-  phoneHref: string;
-}
-
-export interface ExperienceDetailContent {
-  summary: string;
-  sections: Array<{
-    heading: string;
-    body: string;
-    imageUrl: string;
-    imagePosition: "left" | "right";
-  }>;
-  gallery: string[];
-  accommodation: AccommodationCardContent;
-  relatedRegionCta: RelatedRegionCtaContent;
-}
+import { experiences } from "@/data/experiences";
+import type { Experience } from "@/types/experiences";
+import type { ExperienceDetailContent } from "@/types/experience_enrichment";
 
 const getRegionName = (experience: Experience) => {
   if (["Norway", "Iceland", "Faroe Islands", "Finland", "Greenland", "Svalbard"].includes(experience.country)) {
