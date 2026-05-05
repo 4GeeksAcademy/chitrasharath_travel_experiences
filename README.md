@@ -27,6 +27,7 @@ This project was inspired by the following travel websites:
 - [Pelorus Travel](https://pelorustravel.com/us)
 - [Black Tomato](https://www.blacktomato.com/us/)
 - [Sidetracked](https://www.sidetracked.com/)
+- [Atlas Obscura](https://www.atlasobscura.com/) - inspiration for the user profile page
 
 Note: Destination choices and travel themes were inspired by the websites above. Titles, descriptions, and highlight copy in this project are original placeholder content.
 

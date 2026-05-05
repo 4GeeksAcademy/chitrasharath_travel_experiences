@@ -21,10 +21,10 @@ const FavoriteToggleButton = ({
       className={`rounded-full border px-3 py-1.5 text-xs uppercase tracking-[0.2em] transition ${
         active
           ? "border-[var(--color-accent)] bg-[var(--color-accent)] text-[var(--color-paper)]"
-          : "border-white/70 bg-black/25 text-white"
+          : "border-white bg-white text-[var(--color-ink)] shadow-sm"
       }`}
     >
-      {active ? <span aria-hidden="true">♥</span> : "Save"}
+      <span aria-hidden="true">{active ? "♥" : "♡"}</span>
     </button>
   );
 };

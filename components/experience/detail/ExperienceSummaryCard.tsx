@@ -6,6 +6,13 @@ interface ExperienceSummaryCardProps {
   summary: string;
 }
 
+const formatPrice = (price: number, currency: "USD") =>
+  new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency,
+    maximumFractionDigits: 0,
+  }).format(price);
+
 const ExperienceSummaryCard = ({ experience, summary }: ExperienceSummaryCardProps) => {
   return (
     <div className="rounded-3xl border border-[var(--color-border)] bg-white p-6">
@@ -19,7 +26,7 @@ const ExperienceSummaryCard = ({ experience, summary }: ExperienceSummaryCardPro
         <FavoriteToggleButton experienceId={experience.id} />
       </div>
       <p className="mt-4 max-w-3xl text-[var(--color-muted)]">{summary}</p>
-      <div className="mt-6 grid gap-4 text-sm text-[var(--color-muted)] md:grid-cols-3">
+      <div className="mt-6 grid gap-4 text-sm text-[var(--color-muted)] md:grid-cols-2 lg:grid-cols-4">
         <div className="rounded-2xl bg-[var(--color-sand)] p-4">
           <p className="font-display text-[11px] uppercase tracking-[0.2em]">Best months</p>
           <p className="mt-2 text-base text-[var(--color-ink)]">{experience.seasonLabel}</p>
@@ -31,6 +38,12 @@ const ExperienceSummaryCard = ({ experience, summary }: ExperienceSummaryCardPro
         <div className="rounded-2xl bg-[var(--color-sand)] p-4">
           <p className="font-display text-[11px] uppercase tracking-[0.2em]">Rating</p>
           <p className="mt-2 text-base text-[var(--color-ink)]">{experience.rating.toFixed(1)} / 5</p>
+        </div>
+        <div className="rounded-2xl bg-[var(--color-sand)] p-4">
+          <p className="font-display text-[11px] uppercase tracking-[0.2em]">Starting price</p>
+          <p className="mt-2 text-base text-[var(--color-ink)]">
+            {formatPrice(experience.price, experience.priceCurrency)}
+          </p>
         </div>
       </div>
     </div>

@@ -7,6 +7,13 @@ interface ExperienceCardProps {
   experience: Experience;
 }
 
+const formatPrice = (price: number, currency: "USD") =>
+  new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency,
+    maximumFractionDigits: 0,
+  }).format(price);
+
 const ExperienceCard = ({ experience }: ExperienceCardProps) => {
   return (
     <article className="group overflow-hidden rounded-3xl border border-[var(--color-border)] bg-white shadow-sm">
@@ -32,6 +39,9 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
         <p className="line-clamp-2 text-sm text-[var(--color-muted)]">{experience.description}</p>
         <div className="flex flex-wrap items-center justify-between gap-3 border-t border-[var(--color-border)] pt-3 text-xs uppercase tracking-[0.15em] text-[var(--color-muted)]">
           <span>{experience.seasonLabel}</span>
+          <span className="font-semibold text-[var(--color-ink)] normal-case tracking-normal">
+            from {formatPrice(experience.price, experience.priceCurrency)}
+          </span>
         </div>
         <Link
           href={`/experiences/${experience.id}`}
