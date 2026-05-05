@@ -14,14 +14,14 @@ interface HeroBannerProps {
   };
 }
 
-export default function HeroBanner({
+const HeroBanner = ({
   image,
   title,
   subtitle,
   eyebrow,
   breadcrumbs,
   cta,
-}: HeroBannerProps) {
+}: HeroBannerProps) => {
   return (
     <section className="relative isolate overflow-hidden">
       <img src={image} alt={title} className="h-[52vh] w-full object-cover object-center md:h-[62vh]" />
@@ -41,4 +41,6 @@ export default function HeroBanner({
       </div>
     </section>
   );
-}
+};
+
+export default HeroBanner;

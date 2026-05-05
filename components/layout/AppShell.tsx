@@ -8,7 +8,7 @@ import ResponsiveHeader from "@/components/layout/ResponsiveHeader";
 import { FavoritesProvider } from "@/components/state/favorites-context";
 import userProfile from "@/data/user_profile";
 
-export default function AppShell({ children }: PropsWithChildren) {
+const AppShell = ({ children }: PropsWithChildren) => {
   return (
     <FavoritesProvider initialFavorites={userProfile.favoriteExperienceIds}>
       <ResponsiveHeader />
@@ -17,4 +17,6 @@ export default function AppShell({ children }: PropsWithChildren) {
       <Footer />
     </FavoritesProvider>
   );
-}
+};
+
+export default AppShell;

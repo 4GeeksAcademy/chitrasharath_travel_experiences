@@ -25,10 +25,10 @@ interface FavoritesProviderProps extends PropsWithChildren {
   initialFavorites: string[];
 }
 
-export function FavoritesProvider({
+export const FavoritesProvider = ({
   initialFavorites,
   children,
-}: FavoritesProviderProps) {
+}: FavoritesProviderProps) => {
   const [favoriteIds, setFavoriteIds] = useState<string[]>(
     Array.from(new Set(initialFavorites)),
   );
@@ -57,7 +57,7 @@ export function FavoritesProvider({
   return (
     <FavoritesContext.Provider value={value}>{children}</FavoritesContext.Provider>
   );
-}
+};
 
 export function useFavorites() {
   const context = useContext(FavoritesContext);

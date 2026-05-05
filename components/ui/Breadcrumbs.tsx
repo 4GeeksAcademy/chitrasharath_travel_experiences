@@ -6,7 +6,7 @@ interface BreadcrumbsProps {
   items: BreadcrumbItem[];
 }
 
-export default function Breadcrumbs({ items }: BreadcrumbsProps) {
+const Breadcrumbs = ({ items }: BreadcrumbsProps) => {
   return (
     <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-2 text-xs uppercase tracking-[0.16em] text-white/80">
       {items.map((item, index) => {
@@ -26,4 +26,6 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
       })}
     </nav>
   );
-}
+};
+
+export default Breadcrumbs;

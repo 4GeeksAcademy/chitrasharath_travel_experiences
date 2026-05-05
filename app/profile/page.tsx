@@ -8,7 +8,7 @@ import HeroBanner from "@/components/ui/HeroBanner";
 import { useFavorites } from "@/components/state/favorites-context";
 import userProfile from "@/data/user_profile";
 
-export default function ProfilePage() {
+const ProfilePage = () => {
   const [activeTab, setActiveTab] = useState(userProfile.tabs[0]?.id ?? "been");
   const { favoritesCount } = useFavorites();
 
@@ -120,4 +120,6 @@ export default function ProfilePage() {
       </section>
     </div>
   );
-}
+};
+
+export default ProfilePage;

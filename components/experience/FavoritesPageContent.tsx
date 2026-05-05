@@ -6,7 +6,7 @@ import CtaButton from "@/components/ui/CtaButton";
 import { useFavorites } from "@/components/state/favorites-context";
 import { experiences } from "@/data/experiences";
 
-export default function FavoritesPageContent() {
+const FavoritesPageContent = () => {
   const { favoriteIdSet } = useFavorites();
   const favorites = experiences.filter((experience) => favoriteIdSet.has(experience.id));
 
@@ -46,4 +46,6 @@ export default function FavoritesPageContent() {
       emptyMessage="No saved journey matches the active search or filters."
     />
   );
-}
+};
+
+export default FavoritesPageContent;

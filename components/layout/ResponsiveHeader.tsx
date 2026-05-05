@@ -6,13 +6,13 @@ import { useState } from "react";
 import CtaButton from "@/components/ui/CtaButton";
 import { headerContact, primaryNavLinks } from "@/data/site_content";
 
-function MobileMenuDrawer({
+const MobileMenuDrawer = ({
   isOpen,
   onClose,
 }: {
   isOpen: boolean;
   onClose: () => void;
-}) {
+}) => {
   if (!isOpen) return null;
 
   return (
@@ -68,9 +68,9 @@ function MobileMenuDrawer({
       </div>
     </div>
   );
-}
+};
 
-export default function ResponsiveHeader() {
+const ResponsiveHeader = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   return (
@@ -127,4 +127,6 @@ export default function ResponsiveHeader() {
       <MobileMenuDrawer isOpen={isDrawerOpen} onClose={() => setIsDrawerOpen(false)} />
     </header>
   );
-}
+};
+
+export default ResponsiveHeader;

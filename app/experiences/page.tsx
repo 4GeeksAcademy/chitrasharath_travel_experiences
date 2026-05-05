@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import ExperiencesBrowser from "@/components/experience/ExperiencesBrowser";
 import { experiences } from "@/data/experiences";
 
-export default function ExperiencesPage() {
+const ExperiencesPage = () => {
   return (
     <Suspense fallback={<div className="p-8 text-sm text-[var(--color-muted)]">Loading experiences...</div>}>
       <ExperiencesBrowser
@@ -18,4 +18,6 @@ export default function ExperiencesPage() {
       />
     </Suspense>
   );
-}
+};
+
+export default ExperiencesPage;

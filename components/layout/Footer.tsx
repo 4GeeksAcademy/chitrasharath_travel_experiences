@@ -9,7 +9,7 @@ import {
   socialLinks,
 } from "@/data/site_content";
 
-export default function Footer() {
+const Footer = () => {
   return (
     <footer className="bg-[var(--color-ink)] text-[var(--color-paper)]">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-12">
@@ -76,4 +76,6 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

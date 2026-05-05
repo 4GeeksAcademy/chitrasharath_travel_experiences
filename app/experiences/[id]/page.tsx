@@ -7,11 +7,11 @@ import CtaButton from "@/components/ui/CtaButton";
 import { experiences } from "@/data/experiences";
 import { getExperienceDetailContent } from "@/data/experience_enrichment";
 
-export default async function ExperienceDetailPage({
+const ExperienceDetailPage = async ({
   params,
 }: {
   params: Promise<{ id: string }>;
-}) {
+}) => {
   const { id } = await params;
   const experience = experiences.find((item) => item.id === id);
 
@@ -173,4 +173,6 @@ export default async function ExperienceDetailPage({
       </section>
     </div>
   );
-}
+};
+
+export default ExperienceDetailPage;

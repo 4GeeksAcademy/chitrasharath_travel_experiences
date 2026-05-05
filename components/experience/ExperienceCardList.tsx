@@ -6,10 +6,10 @@ interface ExperienceCardListProps {
   emptyMessage: string;
 }
 
-export default function ExperienceCardList({
+const ExperienceCardList = ({
   items,
   emptyMessage,
-}: ExperienceCardListProps) {
+}: ExperienceCardListProps) => {
   if (items.length === 0) {
     return (
       <div className="rounded-3xl border border-dashed border-[var(--color-border)] bg-white p-12 text-center">
@@ -26,4 +26,6 @@ export default function ExperienceCardList({
       ))}
     </div>
   );
-}
+};
+
+export default ExperienceCardList;

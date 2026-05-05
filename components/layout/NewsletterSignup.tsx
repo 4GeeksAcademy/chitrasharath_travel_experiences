@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import { newsletterContent } from "@/data/site_content";
 
-export default function NewsletterSignup() {
+const NewsletterSignup = () => {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
@@ -51,4 +51,6 @@ export default function NewsletterSignup() {
       ) : null}
     </section>
   );
-}
+};
+
+export default NewsletterSignup;

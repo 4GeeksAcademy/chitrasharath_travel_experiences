@@ -24,7 +24,7 @@ interface ExperiencesBrowserProps {
 
 const PAGE_SIZE = 9;
 
-export default function ExperiencesBrowser({
+const ExperiencesBrowser = ({
   items,
   title,
   subtitle,
@@ -33,7 +33,7 @@ export default function ExperiencesBrowser({
   breadcrumbs,
   emptyMessage,
   enableFeatured = false,
-}: ExperiencesBrowserProps) {
+}: ExperiencesBrowserProps) => {
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const router = useRouter();
@@ -195,4 +195,6 @@ export default function ExperiencesBrowser({
       </section>
     </div>
   );
-}
+};
+
+export default ExperiencesBrowser;

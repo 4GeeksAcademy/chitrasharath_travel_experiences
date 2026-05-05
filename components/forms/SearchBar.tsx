@@ -7,12 +7,12 @@ interface SearchBarProps {
   onSubmit?: () => void;
 }
 
-export default function SearchBar({
+const SearchBar = ({
   value,
   placeholder = "Search destinations or titles",
   onChange,
   onSubmit,
-}: SearchBarProps) {
+}: SearchBarProps) => {
   return (
     <form
       onSubmit={(event) => {
@@ -33,4 +33,6 @@ export default function SearchBar({
       />
     </form>
   );
-}
+};
+
+export default SearchBar;

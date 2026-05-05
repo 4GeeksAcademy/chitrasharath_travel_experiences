@@ -9,7 +9,7 @@ interface FilterPanelProps {
   onDestinationChange: (value: string) => void;
 }
 
-function FilterSelect({
+const FilterSelect = ({
   id,
   label,
   value,
@@ -21,7 +21,7 @@ function FilterSelect({
   value: string;
   options: string[];
   onChange: (value: string) => void;
-}) {
+}) => {
   return (
     <div className="w-full">
       <label htmlFor={id} className="mb-2 block text-xs uppercase tracking-[0.18em] text-[var(--color-muted)]">
@@ -42,16 +42,16 @@ function FilterSelect({
       </select>
     </div>
   );
-}
+};
 
-export default function FilterPanel({
+const FilterPanel = ({
   categories,
   destinations,
   selectedCategory,
   selectedDestination,
   onCategoryChange,
   onDestinationChange,
-}: FilterPanelProps) {
+}: FilterPanelProps) => {
   return (
     <div className="grid gap-4 md:grid-cols-2">
       <FilterSelect
@@ -70,4 +70,6 @@ export default function FilterPanel({
       />
     </div>
   );
-}
+};
+
+export default FilterPanel;

@@ -13,7 +13,7 @@ const priceFormatter = new Intl.NumberFormat("en-US", {
   maximumFractionDigits: 0,
 });
 
-export default function ExperienceCard({ experience }: ExperienceCardProps) {
+const ExperienceCard = ({ experience }: ExperienceCardProps) => {
   return (
     <article className="group overflow-hidden rounded-3xl border border-[var(--color-border)] bg-white shadow-sm">
       <div className="relative h-64 overflow-hidden">
@@ -49,4 +49,6 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
       </div>
     </article>
   );
-}
+};
+
+export default ExperienceCard;

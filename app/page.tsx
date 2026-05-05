@@ -19,7 +19,7 @@ import {
   whyUsItems,
 } from "@/data/site_content";
 
-export default function Home() {
+const Home = () => {
   const featured = useMemo(
     () => experiences.filter((experience) => experience.featured).slice(0, 6),
     [],
@@ -335,4 +335,6 @@ export default function Home() {
       </section>
     </div>
   );
-}
+};
+
+export default Home;

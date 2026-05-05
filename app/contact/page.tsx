@@ -1,7 +1,7 @@
 import CtaButton from "@/components/ui/CtaButton";
 import HeroBanner from "@/components/ui/HeroBanner";
 
-export default function ContactPage() {
+const ContactPage = () => {
   return (
     <div>
       <HeroBanner
@@ -42,4 +42,6 @@ export default function ContactPage() {
       </section>
     </div>
   );
-}
+};
+
+export default ContactPage;

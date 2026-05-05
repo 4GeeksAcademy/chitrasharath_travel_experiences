@@ -6,9 +6,9 @@ interface FavoriteToggleButtonProps {
   experienceId: string;
 }
 
-export default function FavoriteToggleButton({
+const FavoriteToggleButton = ({
   experienceId,
-}: FavoriteToggleButtonProps) {
+}: FavoriteToggleButtonProps) => {
   const { isFavorite, toggleFavorite } = useFavorites();
   const active = isFavorite(experienceId);
 
@@ -27,4 +27,6 @@ export default function FavoriteToggleButton({
       {active ? "Saved" : "Save"}
     </button>
   );
-}
+};
+
+export default FavoriteToggleButton;

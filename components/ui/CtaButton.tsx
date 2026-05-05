@@ -20,13 +20,13 @@ const classesByVariant: Record<CtaVariant, string> = {
     "border border-[var(--color-ink)] text-[var(--color-ink)] hover:bg-[var(--color-ink)] hover:text-[var(--color-paper)] focus-visible:outline-[var(--color-ink)]",
 };
 
-export default function CtaButton({
+const CtaButton = ({
   label,
   href,
   variant = "primary",
   fullWidth = false,
   children,
-}: CtaButtonProps) {
+}: CtaButtonProps) => {
   return (
     <Link
       href={href}
@@ -36,4 +36,6 @@ export default function CtaButton({
       {label}
     </Link>
   );
-}
+};
+
+export default CtaButton;

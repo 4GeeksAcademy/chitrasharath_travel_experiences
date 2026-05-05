@@ -7,12 +7,12 @@ interface ResultsPagerProps {
   onNext: () => void;
 }
 
-export default function ResultsPager({
+const ResultsPager = ({
   currentPage,
   totalPages,
   onPrev,
   onNext,
-}: ResultsPagerProps) {
+}: ResultsPagerProps) => {
   if (totalPages <= 1) return null;
 
   return (
@@ -38,4 +38,6 @@ export default function ResultsPager({
       </button>
     </div>
   );
-}
+};
+
+export default ResultsPager;

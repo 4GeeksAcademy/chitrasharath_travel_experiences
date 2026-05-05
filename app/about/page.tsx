@@ -1,7 +1,7 @@
 import CtaButton from "@/components/ui/CtaButton";
 import HeroBanner from "@/components/ui/HeroBanner";
 
-export default function AboutPage() {
+const AboutPage = () => {
   return (
     <div>
       <HeroBanner
@@ -64,4 +64,6 @@ export default function AboutPage() {
       </section>
     </div>
   );
-}
+};
+
+export default AboutPage;
